@@ -1,4 +1,4 @@
-# llnl-docs
+# llnl-docs (GLM-geared)
 
 ## 0. Ask Mohammed to be onboarded to LLNL. 
 
@@ -19,3 +19,6 @@ You will be prompted for your 8-digit pin appended to the 6-digit number on the 
 [venkatraman2@dane6:~]$ ssh tuolumne.llnl.gov
 ```
 
+## 3. Find GLM model of interest
+
+To find a model, check out `/p/vast1/OpenFoldCollab/genome_lm/training_output/`. It is probably there. 
