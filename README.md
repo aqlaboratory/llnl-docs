@@ -1,6 +1,8 @@
 # llnl-docs
 
-## 0. Ask Mohammed to be onboarded to LLNL. You will receive an email from Barry Chen (most likely) and must set up a Zoom person meeting for ID-verification.
+## 0. Ask Mohammed to be onboarded to LLNL. 
+
+You will receive an email from Barry Chen (most likely) and will need to provide your address for them to ship you an RSA token. 
 
 ## 0.5. Check your mail for a physical RSA token. 
 
