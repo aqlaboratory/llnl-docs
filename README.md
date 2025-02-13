@@ -41,9 +41,9 @@ Directory: `/p/vast1/OpenFoldCollab/genome_lm/experiments/SL-GLM_exp`.
 
 Experiment 1: `/SL-GLM_exp/02.10.2025_experiment_1`.
 
-Submission/training scripts: `/SL-GLM_exp/02.10.2025_experiment_1/submit_SL/`.
+Submission/training scripts: `/02.10.2025_experiment_1/submit_SL/`.
 
-Check `configs_SL/esm3s_12l_varlen20k_spanmask01_student_teacher_token.yaml` for the token selection config.
+Check `/02.10.2025_experiment_1/configs_SL/esm3s_12l_varlen20k_spanmask01_student_teacher_token.yaml` for the token selection config.
 * Note the `student_teacher:` key
 
-Currently SL can only handle std-rope so data params like `return_contig_indices: false`  are set correctly in both the student and the teacher configs. The key in ['student_teacher']['selection_scheme']  can only have two values rn — token or batch . You can see batch selection config in configs_SL/esm3s_12l_varlen20k_spanmask01_student_teacher_batch.yaml .
+Currently SL can only handle standard-rope so set data params like `return_contig_indices: false`  correctly in both student and teacher configs. The key in ['student_teacher']['selection_scheme']  can only have two values — token or batch . You can see the batch selection config in `configs_SL/esm3s_12l_varlen20k_spanmask01_student_teacher_batch.yaml`.
