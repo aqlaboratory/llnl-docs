@@ -44,6 +44,9 @@ NOTE: If your job has an "S" under "ST" (Status), this means "Suspended." It is 
 By running squeue without specifying a username:
 `[venkatraman2@tuolumne1004:scripts]$ squeue`
 
+### To search for your job by its id
+`flux jobs | grep fdoYNu1CApX`
+
 ## Selective Learning
 
 Directory: `/p/vast1/OpenFoldCollab/genome_lm/experiments/SL-GLM_exp`.
