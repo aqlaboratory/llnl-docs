@@ -34,6 +34,8 @@ Run it like so:
 [venkatraman2@tuolumne1003:scripts]$ sbatch train_model.sh 
 faKoR2uSfgB
 ```
+## 5. Check on the success of your job using your username
+`[venkatraman2@tuolumne1004:scripts]$ squeue -u venkatraman2`
 
 ## Selective Learning
 
