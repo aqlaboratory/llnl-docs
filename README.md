@@ -35,7 +35,7 @@ Run it like so:
 faKoR2uSfgB
 ```
 ## 5. Check on the success of your job using your username
-`[venkatraman2@tuolumne1004:scripts]$ squeue -u venkatraman2`
+`[venkatraman2@tuolumne1004:scripts]$ squeue -u {username}`
 
 NOTE: If your job has an "S" under "ST" (Status), this means "Suspended." It is possible that all jobs on Tuolomne are being suspended, due to maintenance. 
 
@@ -45,7 +45,7 @@ By running squeue without specifying a username:
 `[venkatraman2@tuolumne1004:scripts]$ squeue`
 
 ### To search for your job by its id
-`flux jobs | grep fdoYNu1CApX`
+`flux jobs | grep {job_id}`
 
 ## Selective Learning
 
