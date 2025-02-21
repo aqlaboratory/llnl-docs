@@ -37,6 +37,13 @@ faKoR2uSfgB
 ## 5. Check on the success of your job using your username
 `[venkatraman2@tuolumne1004:scripts]$ squeue -u venkatraman2`
 
+NOTE: If your job has an "S" under "ST" (Status), this means "Suspended." It is possible that all jobs on Tuolomne are being suspended, due to maintenance. 
+
+### Check whether all jobs are suspended
+
+By running squeue without specifying a username:
+`[venkatraman2@tuolumne1004:scripts]$ squeue`
+
 ## Selective Learning
 
 Directory: `/p/vast1/OpenFoldCollab/genome_lm/experiments/SL-GLM_exp`.
