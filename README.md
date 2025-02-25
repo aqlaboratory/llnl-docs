@@ -19,7 +19,17 @@ You will be prompted for your 8-digit pin appended to the 6-digit number on the 
 [venkatraman2@dane6:~]$ ssh tuolumne.llnl.gov
 ```
 
-## 2.5 Set up your environment using conda.
+## 2.5 Set up your environment using mamba.
+
+### Optional: Improve your shell
+
+Run `mamba install oh-my-bash` or some variant. 
+
+### Install tmux
+
+Run `mamba install tmux` or some variant.
+
+### Fix possible deletion issues in vim
 
 If you are on Mac, you might observe that whenever you try to delete characters in vim, the terminal adds `^?`. By default, the macOS Terminal and some remote SSH sessions send ^? for Delete, which Vim does not interpret as a delete command. Run `stty erase ^?` to circumvent this. 
 
