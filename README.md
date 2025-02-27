@@ -21,6 +21,16 @@ You will be prompted for your 8-digit pin appended to the 6-digit number on the 
 
 ## 2.5 Set up your environment using mamba.
 
+### Install mamba using miniforge.
+
+Miniforge is an edition of Conda that only uses free and openly-licensed packages from the conda-forge project. It is already available on LLNL. Conda is an open-source package and environment manager that helps users install, update, and remove software. It allows you to isntall software WITHOUT needing root access (`sudo`), which is critical on systems like LLNL. 
+
+Mamba is like Conda, but more efficient. 
+```conda install -n base -c conda-forge mamba```
+
+Check that mamba is installed correctly by running
+```mamba --version```
+
 ### Optional: Improve your shell
 
 Run `mamba install oh-my-bash` or some variant. 
