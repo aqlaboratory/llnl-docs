@@ -73,6 +73,12 @@ By running squeue without specifying a username:
 ### To search for your job by its id
 `flux jobs | grep {job_id}`
 
+# Debugging
+
+If your job fails silently (many of mine did at first), try the following.
+
+### 1. Add echo statements to your original script. 
+
 ## Selective Learning
 
 Directory: `/p/vast1/OpenFoldCollab/genome_lm/experiments/SL-GLM_exp`.
