@@ -79,6 +79,16 @@ If your job fails silently (many of mine did at first), try the following.
 
 ### 1. Add echo statements to your original script. 
 
+### 2. Try running in interactive mode using `srun` rather than `sbatch`. 
+
+#### Example: training glm using srun
+```
+srun python /p/vast1/OpenFoldCollab/genome_lm/glm/glm/train/training.py \
+  --config-yaml="/g/g14/venkatraman2/scripts/mvenkat_glm_12l_20k.yaml" \
+  --limit-val-batches 50     --inference-mode-off     --skip-last-val \
+  --compile-off
+```
+
 ## Selective Learning
 
 Directory: `/p/vast1/OpenFoldCollab/genome_lm/experiments/SL-GLM_exp`.
