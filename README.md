@@ -73,6 +73,10 @@ By running squeue without specifying a username:
 ### To search for your job by its id
 `flux jobs | grep {job_id}`
 
+## 6. Kill jobs you don't want
+
+Run `scancel {job_id}`.
+
 # Debugging
 
 If your job fails silently (many of mine did at first), try the following.
