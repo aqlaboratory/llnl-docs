@@ -39,11 +39,20 @@ Run `mamba install oh-my-bash` or some variant.
 
 Run `mamba install tmux` or some variant.
 
-### Fix possible deletion issues in vim
+### Fix possible issues in vim
+
+#### Deletion issue on Mac
 
 If you are on Mac, you might observe that whenever you try to delete characters in vim, the terminal adds `^?`. By default, the macOS Terminal and some remote SSH sessions send ^? for Delete, which Vim does not interpret as a delete command. Run `stty erase ^?` to circumvent this. 
 
 To make this change permanent, run `echo 'stty erase ^?' >> ~/.bashrc`.
+
+#### Enable scrolling with mouse
+
+Run
+```
+echo "set mouse=a" >> ~/.vimrc
+```
 
 ## 3. Find GLM model of interest
 
