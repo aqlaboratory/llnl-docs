@@ -39,9 +39,9 @@ Run `mamba install oh-my-bash` or some variant.
 
 Run `mamba install tmux` or some variant.
 
-### Fix possible issues in vim
+### Optimize vim 
 
-#### Deletion issue on Mac
+#### Vim deletion issue on Mac
 
 If you are on Mac, you might observe that whenever you try to delete characters in vim, the terminal adds `^?`. By default, the macOS Terminal and some remote SSH sessions send ^? for Delete, which Vim does not interpret as a delete command. Run `stty erase ^?` to circumvent this. 
 
@@ -49,10 +49,14 @@ To make this change permanent, run `echo 'stty erase ^?' >> ~/.bashrc`.
 
 #### Enable scrolling with mouse
 
-Run
-```
-echo "set mouse=a" >> ~/.vimrc
-```
+Run `echo "set mouse=a" >> ~/.vimrc`.
+
+### Cache your git credentials
+
+Add your git userame and personal access token to `~/.git-credentials` like so:
+`echo "https://your-username:your-personal-access-token@gitlab.com" >> ~/.git-credentials`
+
+This way, you won't have to log in every time you pull or push. 
 
 ## 3. Find GLM model of interest
 
