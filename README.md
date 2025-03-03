@@ -123,12 +123,12 @@ Currently SL can only handle standard-rope so set data params like `return_conti
 
 To test FSDP, you need to change `pl_strategy` in the model config. You must also specify args that multiply to the world size.
 ```
-    pl_strategy:
-        class:  ModelSeqParallelStrategy
-        args:
-          data_parallel_size: 64 
-          sequence_parallel_size: 1
-          tensor_parallel_size: 1
+pl_strategy:
+  class:  ModelSeqParallelStrategy
+  args:
+    data_parallel_size: 64 
+    sequence_parallel_size: 1
+    tensor_parallel_size: 1
 ```
 
 This is a valid setting for args if `trainer` is configured like so:
