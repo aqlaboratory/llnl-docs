@@ -118,3 +118,28 @@ Check `/02.10.2025_experiment_1/configs_SL/esm3s_12l_varlen20k_spanmask01_studen
 * Note the `student_teacher:` key
 
 Currently SL can only handle standard-rope so set data params like `return_contig_indices: false`  correctly in both student and teacher configs. The key in ['student_teacher']['selection_scheme']  can only have two values — token or batch . You can see the batch selection config in `configs_SL/esm3s_12l_varlen20k_spanmask01_student_teacher_batch.yaml`.
+
+## FSDP Training
+
+To test FSDP, you need to change `pl_strategy` in the model config. You must also specify args that multiply to the world size.
+```
+    pl_strategy:
+        class:  ModelSeqParallelStrategy
+        args:
+          data_parallel_size: 64 
+          sequence_parallel_size: 1
+          tensor_parallel_size: 1
+```
+
+This is a valid setting for args if `trainer` is configured like so:
+```
+trainer:
+    log_every_n_steps: 400  # Log every n steps
+    max_steps: 210005 # Maximum steps
+    precision: bf16-mixed # Precision
+    gradient_clip_val: # Gradient clip value
+    devices: 4 # Devices
+    num_nodes: 16 # Number of nodes
+```
+
+
