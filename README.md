@@ -110,6 +110,18 @@ srun python /p/vast1/OpenFoldCollab/genome_lm/glm/glm/train/training.py \
 
 `ModelSeqParallelStrategy` seems much less reliable than `DDP`, so if your `pl_strategy` `class` is set to `ModelSeqParallelStrategy`, try changing it.
 
+### 4. If debugging NCCL errors, consider the following.
+
+#### a. Set `export NCCL_ASYNC_ERROR_HANDLING=1`
+
+Normally, when NCCL detects an error (e.g., a timeout, GPU failure, or network issue), it does not immediately report the error. Instead, it waits for all ranks to reach the same failure point, which can cause deadlocks where some GPUs hang indefinitely.
+
+With `NCCL_ASYNC_ERROR_HANDLING=1:`
+
+- NCCL immediately detects errors and reports them asynchronously.
+- If a GPU fails or hangs, the job is aborted automatically instead of waiting for other ranks.
+- This prevents silent hangs in distributed training jobs.
+
 ## Selective Learning
 
 Directory: `/p/vast1/OpenFoldCollab/genome_lm/experiments/SL-GLM_exp`.
