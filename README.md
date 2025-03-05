@@ -106,6 +106,10 @@ srun python /p/vast1/OpenFoldCollab/genome_lm/glm/glm/train/training.py \
   --compile-off
 ```
 
+### 3. Consider changing the `pl_strategy` defined in your model config.
+
+`ModelSeqParallelStrategy` seems much less reliable than `DDP`, so if your `pl_strategy` `class` is set to `ModelSeqParallelStrategy`, try changing it.
+
 ## Selective Learning
 
 Directory: `/p/vast1/OpenFoldCollab/genome_lm/experiments/SL-GLM_exp`.
@@ -141,5 +145,7 @@ trainer:
     devices: 4 # Devices
     num_nodes: 16 # Number of nodes
 ```
+
+
 
 
